@@ -7,7 +7,6 @@ import org.itenas.oop.jdbc.utils.ConnectionManager;
 public class TransaksiController {
 
     private ConnectionManager cm = new ConnectionManager();
-    // JDBC + ENCAPSULATION
 
     public int createTransaksi(String metodePembayaran) {
         String sql = "INSERT INTO transaksi (tanggal, subtotal, metode_pembayaran, pembayaran, balance) "
@@ -77,7 +76,7 @@ public class TransaksiController {
 
     public boolean prosesPembayaran(int idTransaksi, int bayar, int total) {
         if (bayar < total) {
-            return false; // BUSINESS RULE
+            return false; 
         }
 
         int kembalian = bayar - total;
