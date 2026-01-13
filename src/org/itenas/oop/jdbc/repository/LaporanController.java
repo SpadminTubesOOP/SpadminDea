@@ -12,7 +12,6 @@ import org.itenas.oop.jdbc.utils.ConnectionManager;
 public class LaporanController {
 
     private final ConnectionManager cm = new ConnectionManager();
-    // ENCAPSULATION
 
     public List<Object[]> getLaporan(Date tglAwal, Date tglAkhir) {
 
@@ -78,7 +77,7 @@ public class LaporanController {
             }
 
         } catch (SQLException e) {
-           System.out.println(e.getMessage()); // EXCEPTION HAe.prinNDLING
+           System.out.println(e.getMessage()); 
         }
         return 0;
     }
@@ -103,7 +102,7 @@ public class LaporanController {
             }
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage()); // EXCEPTION HANDLING
+            System.out.println(e.getMessage()); 
         }
         return 0;
     }
