@@ -5,8 +5,7 @@ public class Layanan {
     private int idLayanan;
     private String namaLayanan;
     private double harga;
-    private int durasi;
-    private boolean aktif;    
+    private int durasi;  
 
     public int getIdLayanan() {
         return idLayanan;
