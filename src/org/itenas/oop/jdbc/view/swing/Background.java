@@ -55,22 +55,18 @@ public class Background extends JPanel {
 
     int height = (int) (getHeight() * (1f - easeOutQuint(animate)));
 
-    // ☕ Wave 1 - coklat muda (belakang)
     g2.setColor(new Color(220, 205, 185));
     g2.fill(createShape(height, 50, 70, 50, 100));
 
-    // ☕ Wave 2 - coklat earthy (tengah)
     g2.setColor(new Color(165, 200, 175));
     g2.fill(createShape(height, 80, 50, 100, 50, 100, 50));
 
-    // 🌿 Wave 3 - hijau sage (depan)
     g2.setColor(new Color(200, 185, 165));
     g2.fill(createShape(height, 70, 20, 60, 20, 70));
 
     int bgHeight = (int) (getHeight() * (1f - easeInOutCirc(animate)));
     bgHeight += header;
 
-    // 🤍 Background konten
     g2.setColor(new Color(248, 246, 242));
     g2.fillRect(0, bgHeight, getWidth(), getHeight());
 
