@@ -45,7 +45,7 @@ public class LoginView extends javax.swing.JFrame {
         terapis4.setIcon(terapisNormal);
         layanan.setIcon(layananNormal);
         transaksi.setIcon(transaksiNormal);
-        jLabel2.setIcon(laporanNormal); // icon laporan
+        jLabel2.setIcon(laporanNormal); 
     }
 
     private void initHover(JLabel label, ImageIcon normal, ImageIcon hover, Runnable onClick) {
