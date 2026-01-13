@@ -11,11 +11,9 @@ import org.itenas.oop.jdbc.utils.ConnectionManager;
 
 public class TerapisController {
 
-    // JDBC CONNECTION
     private ConnectionManager cm = new ConnectionManager();
     private Connection con = cm.connectDb();
 
-    // ================= GET ALL =================
     public List<Terapis> getAllTerapis() {
         List<Terapis> list = new ArrayList<>();
         String sql = "SELECT * FROM terapis WHERE status = 1";
@@ -38,7 +36,6 @@ public class TerapisController {
         return list;
     }
 
-    // ================= GET BY ID =================
     public Terapis getById(int id) {
         String sql = "SELECT * FROM terapis WHERE id_terapis = ? AND status = 1";
 
@@ -61,7 +58,6 @@ public class TerapisController {
         return null;
     }
 
-    // ================= INSERT =================
     public void insert(Terapis t) {
         String sql = """
             INSERT INTO terapis (nama_terapis, no_telp, jenis_kelamin, status)
@@ -79,7 +75,6 @@ public class TerapisController {
         }
     }
 
-    // ================= UPDATE =================
     public void updateTerapis(Terapis t) {
         String sql = """
             UPDATE terapis
@@ -99,7 +94,6 @@ public class TerapisController {
         }
     }
 
-    // ================= DELETE (SOFT DELETE) =================
     public void nonaktifkanTerapis(int id) {
         String sql = "UPDATE terapis SET status = 0 WHERE id_terapis = ?";
 
