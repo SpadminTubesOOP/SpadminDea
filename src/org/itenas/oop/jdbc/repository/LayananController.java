@@ -15,7 +15,6 @@ public class LayananController {
     private ConnectionManager cm = new ConnectionManager();
     private Connection con = cm.connectDb();
 
-    // ================= GET ALL =================
     public List<Layanan> getAllLayanan() {
         List<Layanan> list = new ArrayList<>();
         String sql = "SELECT * FROM layanan WHERE status = 1";
@@ -38,7 +37,6 @@ public class LayananController {
         return list;
     }
 
-    // ================= GET BY ID =================
     public Layanan getById(int id) {
         String sql = "SELECT * FROM layanan WHERE id_layanan = ? AND status = 1";
 
@@ -61,7 +59,6 @@ public class LayananController {
         return null;
     }
 
-    // ================= INSERT =================
     public void insert(Layanan l) {
         String sql = "INSERT INTO layanan (nama_layanan, harga, durasi, status) VALUES (?, ?, ?, 1)";
 
@@ -76,7 +73,6 @@ public class LayananController {
         }
     }
 
-    // ================= UPDATE =================
     public void updateLayanan(Layanan l) {
         String sql = "UPDATE layanan SET nama_layanan=?, harga=?, durasi=? WHERE id_layanan=?";
 
@@ -92,7 +88,6 @@ public class LayananController {
         }
     }
 
-    // ================= DELETE (SOFT DELETE) =================
     public void nonaktifkanLayanan(int id) {
         String sql = "UPDATE layanan SET status = 0 WHERE id_layanan = ?";
 
