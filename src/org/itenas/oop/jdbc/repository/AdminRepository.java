@@ -10,7 +10,6 @@ import org.itenas.oop.jdbc.utils.ConnectionManager;
 public class AdminRepository {
 
     private final ConnectionManager cm = new ConnectionManager(); 
-    // ENCAPSULATION
 
     public boolean login(Admin admin) {
         String sql = "SELECT * FROM admin WHERE username=? AND password=?";
