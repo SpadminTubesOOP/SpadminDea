@@ -31,7 +31,6 @@ public class Transaksi {
         return total;
     }
 
-    // ================= GETTER & SETTER =================
 
     public int getIdTransaksi() {
         return idTransaksi;
